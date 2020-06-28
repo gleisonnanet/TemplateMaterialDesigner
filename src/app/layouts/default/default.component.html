@@ -1,2 +1,14 @@
+<app-header (toggleSideBarForMe)="sideBarToggler()" ></app-header>
+<mat-drawer-container>
 
-<router-outlet></router-outlet>
+
+    <mat-drawer mode="side" [opened]="sideBarOpen" >
+      <mat-sidenav-container fxFlexFill>
+        <app-sidebar></app-sidebar>
+        </mat-sidenav-container>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

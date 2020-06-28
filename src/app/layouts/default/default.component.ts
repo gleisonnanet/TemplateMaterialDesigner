@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-default',
   templateUrl: './default.component.html',
@@ -7,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultComponent implements OnInit {
 
+  sideBarOpen = true;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() { }
+
+
+  sideBarToggler() {
+    this.sideBarOpen = !this.sideBarOpen;
   }
 
 }
